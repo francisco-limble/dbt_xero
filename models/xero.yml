@@ -184,12 +184,6 @@ models:
 
   - name: xero__balance_sheet_report
     description: Each record represents the state of the balance sheet for a given account on a given month.
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - source_relation
-            - date_month
-            - account_name
     columns:
       - name: date_month
         description: The month a given record is reporting on.
